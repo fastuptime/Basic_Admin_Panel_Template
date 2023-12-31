@@ -1,0 +1,60 @@
+<%- include('../partials/_header.ejs') -%>
+<%- include('../partials/_sidebar.ejs') -%>
+<%- include('../partials/_navbar.ejs') -%>
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                  <div class="card" style="border-radius: 1rem;">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                      <table id="myTable" class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kullanıcı Adı</th>
+                            <th scope="col">E-Posta</th>
+                            <th scope="col">Telefon</th>
+                            <th scope="col">Bakiye</th>
+                            <th scope="col">Harcanan</th>
+                            <th scope="col">Statü</th>
+                            <th scope="col">Kayıt Tarihi</th>
+                            <th scope="col">İşlemler</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% users.forEach(function(user) { %>
+                            <tr>
+                              <th scope="row"><%= user.id %></th>
+                              <td>
+                                @<%= user.username %>
+                              </td>
+                              <td><%= user.mail.address %></td>
+                              <td><%= user.phone.number %></td>
+                              <td><%= user.balance %></td>
+                              <td><%= user.spent %></td>
+                              <td><% if(user.role == 'admin') { %><span class="badge bg-danger">Admin</span><% } else { %><span class="badge bg-success">Kullanıcı</span><% } %></td>
+                              <td><%= user.created %></td>
+                              <td>
+                                <!--
+                                  üste çıkarılan dropdown menüsü
+                                -->
+                                <div class="btn-group" role="group" style="z-index: 999;">
+                                  <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-icon" data-bs-toggle="dropdown" aria-expanded="false">İşlemler</button>
+                                  <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="/admin/tickets?user=<%= user.id %>">Destek Talepleri</a>
+                                    <a class="dropdown-item" href="/admin/users/detailed_information?user=<%= user.id %>">Detaylı Bilgiler</a>
+                                    <a class="dropdown-item" href="/admin/users/logs?user=<%= user.id %>">Logları</a>
+                                    <a class="dropdown-item" onclick="return confirm('Kullanıcıyı silmek istediğinize emin misiniz?');" href="/admin/users/delete?user=<%= user.id %>">Sil</a>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          <% }); %>
+                        </tbody>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- / Content -->
+<%- include('../partials/_footer.ejs') -%>
