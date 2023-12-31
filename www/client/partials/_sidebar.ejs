@@ -1,0 +1,113 @@
+ <!-- Layout wrapper -->
+ <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="/admin" class="app-brand-link">
+            <!-- <h2>Software Home</h2> -->
+            <span class="app-brand-logo demo" style="text-align: center; font-size: 20px; font-weight: bold;">
+              Software Home
+              </span>
+          </a>
+
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboard -->
+            <li class="menu-item">
+                <a href="/admin" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                    <div>Dashboard</div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="/admin/users" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-user-circle"></i>
+                    <div>Müşteriler</div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="/admin/payments" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-money"></i>
+                    <div>Ödemeler</div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="/admin/tickets" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-support"></i>
+                    <div>Destek</div>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="/admin/settings" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-cog"></i>
+                    <div>Ayarlar</div>
+                </a>
+            </li>
+
+
+          <!-- <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-layout"></i>
+              <div>Kullanıcıları Yönet</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="/admin/users" class="menu-link">
+                  <div> Kullanıcıları Görüntüle</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/admin/users/create" class="menu-link">
+                  <div> Kullanıcı Ekle</div>
+                </a>
+                </li>
+            </ul>
+          </li> -->
+
+         
+          <!-- <li class="menu-header small text-uppercase"><span class="menu-header-text">Misc</span></li>
+          <li class="menu-item">
+            <a
+              href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+              target="_blank"
+              class="menu-link"
+            >
+              <i class="menu-icon tf-icons bx bx-support"></i>
+              <div data-i18n="Support">Support</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a
+              href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+              target="_blank"
+              class="menu-link"
+            >
+              <i class="menu-icon tf-icons bx bx-file"></i>
+              <div data-i18n="Documentation">Documentation</div>
+            </a>
+          </li> -->
+        </ul>
+      </aside>
+
+      <script>
+        windows = window.location.href;
+        document.querySelectorAll('.menu-item').forEach((item) => {
+            if (item.querySelector('a').href == windows) {
+                item.classList.add('active');
+            }
+        });
+      </script>
+      <!-- / Menu -->
