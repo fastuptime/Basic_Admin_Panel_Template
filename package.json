@@ -1,0 +1,31 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Caner İlhan Fastuptime",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "dayjs": "^1.11.10",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "glob": "^7.2.0",
+    "md5": "^2.3.0",
+    "mongoose": "^8.0.3",
+    "node-json-db": "^2.3.0",
+    "nodemailer": "^6.9.7",
+    "util": "^0.12.5",
+    "wio.db": "^4.0.22"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
