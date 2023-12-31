@@ -22,7 +22,7 @@
 - Start the bot by entering the following command in Terminal
 `node .`
 
-
+```
 📦Basic_Admin_Panel_Template
  ┣ 📂functions
  ┃ ┣ 📜log.js
@@ -279,7 +279,7 @@
  ┣ 📜config.js
  ┣ 📜database.json
  ┗ 📜package.json
-
+```
 ## ⛳Tech Stack ⛳
 
 **🗄️Server:** Node, Colors, Express, Cookie Parser, BodyParser, Mongoose, etc.
